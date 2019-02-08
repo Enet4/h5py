@@ -75,7 +75,10 @@ static const H5Z_class_t filter_class = {
 };
 #else
 static const H5Z_class_t filter_class = {
+    2,
     (H5Z_filter_t)(H5PY_FILTER_LZF),
+    1,
+    1,
     "lzf",
     NULL,
     (H5Z_set_local_func_t)(lzf_set_local),
